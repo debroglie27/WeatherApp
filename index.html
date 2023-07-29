@@ -12,11 +12,35 @@
       <header>
         <h1>Weather App</h1>
       </header>
+
       <div class="input-container">
         <input type="text" placeholder="enter city name" />
         <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
-      <div class="result-container"></div>
+
+      <div class="result-container">
+        <img src="" alt="weather icon">
+        <p class="temperature"></p>
+        <p class="city"></p>
+
+        <div class="humidity-wind-container">
+          <div class="humidity-container">
+            <div class="icon-value-container">
+              <i class="humidity-icon"></i>
+              <p class="humidity-value"></p>
+            </div>
+            <p>Humidity</p>
+          </div>
+
+          <div class="wind-container">
+            <div class="icon-value-container">
+              <i class="wind-icon"></i>
+              <p class="wind-speed-value"></p>
+            </div>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <p class="copyright">© 2023 Arijeet De</p>
