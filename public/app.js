@@ -45,10 +45,10 @@ async function checkWeather() {
         temperature.textContent = Math.round(data.main.temp) + '°C';
         city.textContent = data.name;
         humidity.textContent = data.main.humidity + '%';
-        windSpeed.textContent = data.wind.speed + ' Km/hr';
+        windSpeed.textContent = Math.round(data.wind.speed) + ' Km/hr';
 
         resultContainer.classList.remove('hidden');
-        mainContainer.style.height = "500px";
+        mainContainer.style.height = "495px";
     }
     catch {
     }
