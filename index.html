@@ -18,24 +18,30 @@
         <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
 
-      <div class="result-container">
-        <img src="" alt="weather icon">
-        <p class="temperature"></p>
-        <p class="city"></p>
+      <div class="error-container hidden">
+        <p class="error"></p>
+      </div>
+
+      <div class="result-container hidden">
+        <div class="icon-container">
+          <img src="" alt="weather icon">
+        </div>
+        <p class="temperature">23°C</p>
+        <p class="city">London</p>
 
         <div class="humidity-wind-container">
           <div class="humidity-container">
             <div class="icon-value-container">
-              <i class="humidity-icon"></i>
-              <p class="humidity-value"></p>
+              <i class="fa-solid fa-water humidity-icon"></i>
+              <p class="humidity">60%</p>
             </div>
             <p>Humidity</p>
           </div>
 
           <div class="wind-container">
             <div class="icon-value-container">
-              <i class="wind-icon"></i>
-              <p class="wind-speed-value"></p>
+              <i class="fa-solid fa-wind wind-icon"></i>
+              <p class="wind-speed">23 Km/hr</p>
             </div>
             <p>Wind Speed</p>
           </div>
