@@ -31,7 +31,7 @@ main {
     -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
-    transition: height 0.3s ease;
+    transition: height 0.5s ease;
 }
 
 header {

@@ -55,5 +55,14 @@ async function checkWeather() {
 }
 
 
-input.addEventListener('change', checkWeather);
+input.addEventListener('keydown', (event) => {
+    errorContainer.classList.add('hidden');
+    resultContainer.classList.add('hidden');
+    mainContainer.style.height = "200px";
+
+    if (event.key == "Enter") {
+        checkWeather();
+    }
+});
+
 button.addEventListener('click', checkWeather);
