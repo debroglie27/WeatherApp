@@ -1,4 +1,4 @@
-// require('dotenv').config(); ascjbsdkchb
+// require('dotenv').config();
 
 // const apiKey = process.env.WEATHER_API;
 const apiKey = "49144f1653786902a8edaa421481bdd7";
