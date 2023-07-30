@@ -1,7 +1,6 @@
 # Weather App
 
-Welcome to my web app called Weather App. Provide a city name and get the  
-weather information.
+Welcome to my web app called Weather App. Provide a city name and get the weather information.
 
 
 ## Information Provided
@@ -19,7 +18,7 @@ weather information.
 ## Link
 
 Get your city's Weather Information today!  
-[Web App Link](https://debroglie27.github.io/WeatherApp)
+[Web App Link](https://a-weather-app.glitch.me/)
 
 
 ## Built with
