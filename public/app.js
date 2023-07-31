@@ -36,7 +36,11 @@ async function checkWeather() {
     }
 
     try {
-        const response = await fetch(baseUrl + input.value);
+        const cityName = input.value;
+        const weatherURL = `weather/${cityName}`;
+        const response = await fetch(weatherURL);
+
+        // const response = await fetch(baseUrl + input.value);
         if (response.status == "404") {
             handleError("Invalid City Name!");
             return;
