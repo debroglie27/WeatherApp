@@ -1,5 +1,6 @@
 const express = require('express');
 const fetch = require('node-fetch');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.port || 3000
@@ -9,7 +10,7 @@ app.listen(port, () => {
 app.use(express.static('public'));
 
 
-const apiKey = "49144f1653786902a8edaa421481bdd7";
+const apiKey = process.env.WEATHER_API_KEY;
 const baseURL = `https://api.openweathermap.org/data/2.5/weather?units=metric&appid=${apiKey}&q=`;
 
 app.get('/weather/:cityName', async (request, response) => {
