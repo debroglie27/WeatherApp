@@ -18,12 +18,16 @@ const city = document.querySelector('.city');
 const humidity = document.querySelector('.humidity');
 const windSpeed = document.querySelector('.wind-speed');
 
+const normalHeight = "200px";
+const errorHeight = "249px";
+const resultHeight = "495px";
+
 
 function handleError (msg) {
     errorContainer.classList.remove('hidden');
     errorMsg.textContent = msg;
     resultContainer.classList.add('hidden');
-    mainContainer.style.height = "249px";
+    mainContainer.style.height = errorHeight;
 }
 
 
@@ -35,37 +39,32 @@ async function checkWeather() {
         return;
     }
 
-    try {
-        const cityName = input.value;
-        const weatherURL = `weather/${cityName}`;
-        const response = await fetch(weatherURL);
+    const cityName = input.value;
+    const weatherURL = `weather/${cityName}`;
+    const response = await fetch(weatherURL);
 
-        // const response = await fetch(baseUrl + input.value);
-        if (response.status == "404") {
-            handleError("Invalid City Name!");
-            return;
-        }
-
-        let data = await response.json();
-    
-        weatherIcon.src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
-        temperature.textContent = Math.round(data.main.temp) + '°C';
-        city.textContent = data.name;
-        humidity.textContent = data.main.humidity + '%';
-        windSpeed.textContent = Math.round(data.wind.speed) + ' Km/hr';
-
-        resultContainer.classList.remove('hidden');
-        mainContainer.style.height = "495px";
+    if (response.status == "404") {
+        handleError("Invalid City Name!");
+        return;
     }
-    catch {
-    }
+
+    let data = await response.json();
+
+    weatherIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+    temperature.textContent = Math.round(data.main.temp) + '°C';
+    city.textContent = data.name;
+    humidity.textContent = data.main.humidity + '%';
+    windSpeed.textContent = Math.round(data.wind.speed) + ' Km/hr';
+
+    resultContainer.classList.remove('hidden');
+    mainContainer.style.height = resultHeight;
 }
 
 
 input.addEventListener('keydown', (event) => {
     errorContainer.classList.add('hidden');
     resultContainer.classList.add('hidden');
-    mainContainer.style.height = "200px";
+    mainContainer.style.height = normalHeight;
 
     if (event.key == "Enter") {
         checkWeather();

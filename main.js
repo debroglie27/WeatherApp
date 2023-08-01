@@ -18,6 +18,10 @@ app.get('/weather/:cityName', async (request, response) => {
     const finalURL = baseURL + cityName;
 
     const fetch_response = await fetch(finalURL);
-    const json = await fetch_response.json();
-    response.json(json);
+    const response_json = await fetch_response.json();
+
+    if (response_json.cod == '404')
+        response.status(404).json({ message: response_json.message });
+    else
+        response.json(response_json);
 });

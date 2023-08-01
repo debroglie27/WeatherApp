@@ -18,7 +18,7 @@ Welcome to my web app called Weather App. Provide a city name and get the weathe
 ## Link
 
 Get your city's Weather Information today!  
-[Web App Link](https://a-weather-app.glitch.me/)
+[Web App Link](https://arijeet-weather-app.glitch.me/)
 
 
 ## Built with
