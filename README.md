@@ -1,6 +1,6 @@
 # Weather App
 
-Welcome to my web app called Weather App. Provide a city name and get the weather information.
+Welcome to my Weather App made using an API. Provide a city name and get the weather information.
 
 
 ## Information Provided
@@ -10,10 +10,6 @@ Welcome to my web app called Weather App. Provide a city name and get the weathe
 - Humidity
 - Wind Speed
 
-
-## API Used
-
-[OpenWeatherMap](https://openweathermap.org/api)
 
 ## Link
 
@@ -26,7 +22,8 @@ Get your city's Weather Information today!
 - HTML
 - CSS
 - Javascript
-- No external frameworks
+- Frameworks: Express, node-fetch, dotenv
+- Weather API: [OpenWeatherMap](https://openweathermap.org/api)
 
 ## Screenshot
 
